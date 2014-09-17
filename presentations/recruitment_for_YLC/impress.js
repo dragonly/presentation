@@ -727,6 +727,9 @@
             event.preventDefault();
             START_X = event.touches[0].pageX;
         }, false);
+        document.addEventListener("touchmove", function ( event ) {
+            event.preventDefault();
+        }, false);
         document.addEventListener("touchend", function ( event ) {
             event.preventDefault();
             var dx = event.touches[0].pageX - START_X;
