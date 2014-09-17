@@ -721,6 +721,19 @@
                 event.preventDefault();
             }
         }, false);
+
+        document.addEventListener("touchstart", function ( event ) {
+            START_X = event.touches[0].pageX;
+        }, false);
+        document.addEventListener("touchend", function ( event ) {
+            var dx = event.touches[0].pageX - START_X;
+            if (dx > 0){
+                api.next();
+            }
+            else {
+                api.prev();
+            }
+        }, false);
         
         // delegated handler for clicking on the links to presentation steps
         document.addEventListener("click", function ( event ) {
