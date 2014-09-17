@@ -722,6 +722,7 @@
             }
         }, false);
 
+        var START_X;
         document.addEventListener("touchstart", function ( event ) {
             START_X = event.touches[0].pageX;
         }, false);
