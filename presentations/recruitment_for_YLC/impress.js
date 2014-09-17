@@ -724,9 +724,11 @@
 
         var START_X;
         document.addEventListener("touchstart", function ( event ) {
+            event.preventDefault();
             START_X = event.touches[0].pageX;
         }, false);
         document.addEventListener("touchend", function ( event ) {
+            event.preventDefault();
             var dx = event.touches[0].pageX - START_X;
             if (dx > 0){
                 api.next();
